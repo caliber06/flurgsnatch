@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://7pxk3rl74jfq"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_o1t1t"]
+[ext_resource type="Texture2D" uid="uid://bq8llcf83p51v" path="res://icon.svg" id="2_c8qow"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxdpx"]
+size = Vector2(128, 128)
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_o1t1t")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(576, 656)
+scale = Vector2(11.44, 1)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("2_c8qow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource("RectangleShape2D_xxdpx")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(632, 528)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+texture = ExtResource("2_c8qow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource("RectangleShape2D_xxdpx")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(176, 336)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
+texture = ExtResource("2_c8qow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource("RectangleShape2D_xxdpx")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(952, 408)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5"]
+texture = ExtResource("2_c8qow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+shape = SubResource("RectangleShape2D_xxdpx")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(408, 440)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6"]
+texture = ExtResource("2_c8qow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+shape = SubResource("RectangleShape2D_xxdpx")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2(1128, 216)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D7"]
+texture = ExtResource("2_c8qow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+shape = SubResource("RectangleShape2D_xxdpx")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://player.tscn")
+spawn_path = NodePath("..")
